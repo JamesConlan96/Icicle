@@ -1,14 +1,14 @@
 # Icicle
-A custom theme for Zsh with a real-time refreshing timestamp
+A custom theme for Zsh with a real-time refreshing timestamp and git status.
 
-![Clean git repo](/screenshots/clean.png)
+Username/hostname changes colour if running as the root user:
+![Root colour scheme and local git status icons](/screenshots/root_all_status.png)
 
-![Untracked files](/screenshots/untracked.png)
+Ahead of the remote git branch:
+![Ahead of remote branch](/screenshots/ahead.png)
 
-![Files added](/screenshots/added.png)
+Behind the remote git branch:
+![Behind remote branch](/screenshots/behind.png)
 
-![Files moved](/screenshots/moved.png)
-
-![Files removed](/screenshots/removed.png)
-
-![Unmerged files](/screenshots/unmerged.png)
+Diverged from the remote git branch:
+![Diverged from remote branch](/screenshots/diverged.png)
