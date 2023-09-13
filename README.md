@@ -1,5 +1,5 @@
 # Icicle
-A custom theme for Zsh
+A custom theme for Zsh with a refreshing clock
 
 ![Clean git repo](/screenshots/clean.png)
 
