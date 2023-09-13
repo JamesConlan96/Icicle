@@ -1,4 +1,4 @@
-# icicle
+# Icicle
 A custom theme for Zsh
 
 ![Clean git repo](/screenshots/clean.png)
