@@ -50,8 +50,20 @@ if $(echo "$_INDEX" | command grep -q '^## .*diverged'); then
         ZSH_THEME_GIT_PROMPT_SUFFIX="%{$FX[bold]$FG[025]%} ⥾%{$reset_color%}"
 fi
 
-# Refresh prompt every second (updates timestamp and git info)
+# Refresh prompt every second (updates timestamp and git info) except if being used
+update-prompt-accept-line() {
+    zle reset-prompt
+    zle accept-line
+}
+zle -N update-prompt-accept-line
+bindkey "^M" update-prompt-accept-line
 TMOUT=1
 TRAPALRM() {
-        zle reset-prompt
+        case "$WIDGET" in up-line-or-history|up-line-or-beginning-search|down-line-or-history|down-line-or-beginning-search|.history-incremental-search-backward|.history-incremental-search-forward)
+            :
+            ;;
+        *)
+            zle reset-prompt
+            ;;
+    esac
 }
